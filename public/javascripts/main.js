@@ -1,5 +1,5 @@
-define(['jquery', 'bitcore'],
-  function ($, bitcore) {
+define(['jquery', 'bitcore', 'qrcode'],
+  function ($, bitcore, qrcode) {
   'use strict';
 
   var bitcore = require('bitcore');
@@ -8,15 +8,26 @@ define(['jquery', 'bitcore'],
   var re = /[0-9]{6}$/;
   var a,k,m;
 
-  while (true) {
-    k = Key.generateSync();
+  var generateAddress = function (k){
+    var a;
     a = Address.fromKey(k);
-    m = a.toString().match(re);
-    if (m) break;
+
+    return a;
   }
 
-  console.log('Address: '+a.toString());
-  console.log('Private Key: '+k.private.toString('hex'));
+  var generateKey = function (){
+    var k;
+    k = Key.generateSync();
+
+    return k;
+  }
+
+  var address = generateAddress();
+
+  console.log(address);
+
+  console.log('Address: ' + address[0].toString());
+  console.log('Private Key: ' + address[1].private.toString('hex'));
 
 
 });
