@@ -1,0 +1,14 @@
+{
+  "name": "Animated_GIF",
+  "homepage": "https://github.com/sole/Animated_GIF",
+  "_release": "8414bca77f",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "8414bca77f59328443c85e1918806bbca1cf2bd4"
+  },
+  "_source": "git://github.com/sole/Animated_GIF.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/sole/Animated_GIF.git",
+  "_direct": true
+}

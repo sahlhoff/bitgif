@@ -1,0 +1,36 @@
+{
+  "name": "bitcore",
+  "main": "browser/bundle.js",
+  "version": "0.1.23",
+  "homepage": "http://bitcore.io",
+  "authors": [
+    "Ryan X. Charles (<ryan@bitpay.com>)"
+  ],
+  "description": "A pure, powerful core for your bitcoin project.",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "bitcoin",
+    "bitcore",
+    "btc",
+    "satoshi"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "tests"
+  ],
+  "_release": "0.1.23",
+  "_resolution": {
+    "type": "version",
+    "tag": "v0.1.23",
+    "commit": "6aef44e98a52b1a40aea9b3662802e67fdec2ea1"
+  },
+  "_source": "git://github.com/bitpay/bitcore.git",
+  "_target": "~0.1.23",
+  "_originalSource": "bitcore",
+  "_direct": true
+}
