@@ -14,7 +14,8 @@ define(['jquery', 'bitcore', 'qrcode', 'Animated_GIF'],
 
 
   var ag = new Animated_GIF({ 
-    workerPath: 'javascripts/lib/animated_GIF/dist/Animated_GIF.worker.min.js' 
+    workerPath: 'javascripts/lib/animated_GIF/dist/Animated_GIF.worker.min.js',
+    sampleInterval: 100
   }); 
   ag.setSize(320, 340);
 
@@ -52,8 +53,13 @@ define(['jquery', 'bitcore', 'qrcode', 'Animated_GIF'],
   keyObject.innerHTML = keyImage;
 
   // Add images to frame
-  ag.addFrame(addressObject.firstChild);
-  ag.addFrame(keyObject.firstChild);
+  for(var i = 0; i< 30; i++){
+    if(i % 2 == 0){
+      ag.addFrame(addressObject.firstChild);
+    } else {
+      ag.addFrame(keyObject.firstChild);
+    }
+  }
 
   // Generate gif
   ag.getBase64GIF(function(image) {
